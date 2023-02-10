@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #a2a2a2;
+}
+a:hover {
+  color: white;
+}
+
+input,
+button {
+  border: none;
+  background: none;
+  outline: none;
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: grid;
+  grid: "header" 10vh "main" auto/1fr;
+  font-size: 62.5%;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 600;
+}
+.subtitle.mt:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+header {
+  grid-area: header;
+  background: #111;
+}
+header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+header .container .input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  width: 100%;
+}
+header .container .input-container input,
+header .container .input-container button {
+  font-size: inherit;
+}
+header .container .input-container input {
+  width: 40%;
+  background: #fff;
+  border-radius: 0.4rem 0 0 0.4rem;
+  padding: 0.5rem 0.8rem;
+}
+@media (max-width: 720px) {
+  header .container .input-container input {
+    width: 80%;
+  }
+}
+header .container .input-container button {
+  background: #fff;
+  border-radius: 0 0.4rem 0.4rem 0;
+  padding: 0.5rem 0.9rem;
+  background: #000;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+header .container .input-container button:hover {
+  background: #0d0d0d;
+}
+
+main {
+  grid-area: main;
+  background: #222;
+  padding: 3rem;
+}
+@media (max-width: 720px) {
+  main {
+    padding: 1rem;
+  }
+}
+main .loader {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .loader.show {
+  display: flex;
+}
+main .loader .spin {
+  border: 0.5rem solid #111;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  animation: spin linear 1s infinite;
+  width: 3rem;
+}
+@keyframes spin {
+  to {
+    rotate: 360deg;
+  }
+}
+main #no-word {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 100%;
+}
+main #no-word.hide {
+  display: none;
+}
+main #no-word p {
+  font-size: 1.4rem;
+  color: #eee;
+}
+main p#searched-word {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+main .grid {
+  display: none;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 4rem;
+}
+@media (max-width: 720px) {
+  main .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+}
+main .grid.show {
+  display: grid;
+}
+main .grid .group {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  flex-direction: column;
+  gap: 5rem;
+  border: 1px solid #444;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+main .grid .group .item {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .grid .group .item ul {
+  list-style: none;
+}
+main .grid .group .item ul li {
+  font-size: 1.2rem;
+  color: #eee;
+}
+main .grid .group .container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 1rem;
+}
+main .grid .group .container audio {
+  width: 100%;
+}
+main .grid .group .container img {
+  max-width: 100%;
+}
+main .grid .group .container div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+main .grid .group .container div.license {
+  margin-top: auto;
+}
+main .grid .group .container p {
+  color: #eee;
+  font-size: 1.2rem;
+}/*# sourceMappingURL=style.css.map */
