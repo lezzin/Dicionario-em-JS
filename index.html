@@ -1,41 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dictionary App</title>
 
-    <link rel="stylesheet" href="./css/style.css">
-</head>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <div class="container">
-            <form class="input-container" id="form">
-                <input type="text" placeholder="Search the word here..." required>
-                <button>></button>
-            </form>
-        </div>
+      <div class="container">
+        <form class="input-container" id="form">
+          <input type="text" placeholder="Search the word here..." required />
+          <button>></button>
+        </form>
+      </div>
     </header>
 
-
     <main class="hide">
-        <span class="loader">
-            <div class="spin"></div>
-        </span>
+      <span class="loader">
+        <div class="spin"></div>
+      </span>
 
-        <p id="searched-word"></p>
+      <p id="searched-word"></p>
 
-        <section class="grid">
-            <section class="group" id="info-group"></section>
-            <section class="group" id="audio-group"></section>
-        </section>
+      <section class="grid">
+        <section class="group" id="info-group"></section>
+        <section class="group" id="audio-group"></section>
+      </section>
 
-        <section id="no-word" class="hide"></section>
+      <section id="no-word" class="hide"></section>
     </main>
 
     <script src="./js/script.js"></script>
-</body>
-
+  </body>
 </html>
